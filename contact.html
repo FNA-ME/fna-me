@@ -9,20 +9,23 @@
   <style>
     :root { color-scheme: light; --navy: #102c3b; --ink: #243943; --muted: #54656b; --accent: #965434; --line: #d9dfdd; --paper: #f7f6f2; }
     *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-padding-top: 100px; }
     body { min-height: 100vh; display: flex; flex-direction: column; margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 Arial, Helvetica, sans-serif; }
     a { color: inherit; }
     a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
     .wrap { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
-    .skip-link { position: absolute; left: 16px; top: -60px; z-index: 10; padding: 8px 14px; background: var(--navy); color: white; }
+    .skip-link { position: absolute; left: 16px; top: -60px; z-index: 60; padding: 8px 14px; background: var(--navy); color: white; }
     .skip-link:focus { top: 12px; }
-    .site-header { position: static; background: var(--paper); border-bottom: 1px solid var(--line); }
-    .header-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-header { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 2px 12px rgba(16, 44, 59, .06); }
+    .header-inner { position: relative; min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { color: var(--navy); font: 700 1.55rem Georgia, 'Times New Roman', serif; text-decoration: none; letter-spacing: -.04em; white-space: nowrap; }
     .brand span { color: var(--accent); }
     .nav-links { display: flex; flex-wrap: wrap; gap: 12px 30px; align-items: center; }
     .nav-links a { color: var(--ink); font-size: .9rem; font-weight: 600; text-decoration: none; }
     .nav-links a:hover, .contact-row:hover { color: var(--accent); }
     .nav-links .current { border: 1px solid var(--navy); border-radius: 100px; padding: 8px 16px; }
+    .menu-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 8px; background: white; color: var(--navy); font-size: 1.35rem; cursor: pointer; }
+    .menu-toggle:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
     main { flex: 1; }
     .contact-layout { min-height: min(680px, calc(100vh - 170px)); display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 7vw, 100px); align-items: center; padding-block: 80px; }
     .eyebrow { margin: 0 0 22px; color: var(--accent); font-size: .8rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
@@ -43,8 +46,8 @@
     .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
     .footer-inner span { color: var(--navy); font: 400 1.2rem Georgia, 'Times New Roman', serif; }
     .footer-inner a { color: var(--navy); font-size: .9rem; font-weight: 700; text-underline-offset: 4px; }
-    @media (max-width: 800px) { .contact-layout { grid-template-columns: 1fr; min-height: 0; } .contact-card { max-width: 600px; } }
-    @media (max-width: 600px) { .wrap { width: min(100% - 32px, 1160px); } .header-inner { flex-direction: column; align-items: flex-start; gap: 12px; padding-block: 18px; } .nav-links { gap: 8px 18px; } .nav-links .current { padding: 4px 12px; } .contact-layout { padding-block: 60px; } h1 { font-size: clamp(3.1rem, 13vw, 4.8rem); } .identity { align-items: flex-start; } .identity img { width: 76px; height: 76px; } }
+    @media (max-width: 800px) { html { scroll-padding-top: 84px; } .header-inner { min-height: 68px; } .menu-toggle { display: grid; place-items: center; margin-left: auto; } .nav-links { display: none; position: absolute; top: 100%; left: -24px; width: calc(100% + 48px); flex-direction: column; align-items: stretch; gap: 0; padding: 12px 24px 20px; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 16px 24px rgba(16, 44, 59, .1); } .nav-links.is-open { display: flex; } .nav-links a, .nav-links .current { padding: 12px 14px; border: 0; border-radius: 8px; font-size: .95rem; } .nav-links .current { background: #e9eeeb; } .contact-layout { grid-template-columns: 1fr; min-height: 0; } .contact-card { max-width: 600px; } }
+    @media (max-width: 600px) { .wrap { width: min(100% - 32px, 1160px); } .nav-links { left: -16px; width: calc(100% + 32px); padding-inline: 16px; } .contact-layout { padding-block: 60px; } h1 { font-size: clamp(3.1rem, 13vw, 4.8rem); } .identity { align-items: flex-start; } .identity img { width: 76px; height: 76px; } }
   </style>
 </head>
 <body>
@@ -52,7 +55,8 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="Farhana Nasrin Akter, profile home">FNA<span>.</span></a>
-      <nav class="nav-links" aria-label="Main navigation">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="main-nav" aria-expanded="false"><span aria-hidden="true">☰</span></button>
+      <nav class="nav-links" id="main-nav" aria-label="Main navigation">
         <a href="index.html">Profile</a>
         <a href="index.html#publications">Publications</a>
         <a class="current" href="contact.html" aria-current="page">Contact</a>
@@ -75,5 +79,18 @@
     </div>
   </main>
   <footer class="site-footer"><div class="wrap footer-inner"><span>Farhana Nasrin Akter</span><a href="index.html">Back to profile</a></div></footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('#main-nav');
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') !== 'true';
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      mainNav.classList.toggle('is-open', open);
+    });
+    mainNav.addEventListener('click', event => {
+      if (event.target.closest('a') && mainNav.classList.contains('is-open')) menuButton.click();
+    });
+  </script>
 </body>
 </html>
