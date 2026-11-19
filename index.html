@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic profile of Farhana Nasrin Akter, whose research interests include energy storage materials and electrochemical analysis.">
+  <meta name="description" content="Farhana Nasrin Akter is a mechanical engineering PhD student and research assistant working on energy storage materials and lithium-sulfur batteries.">
   <meta name="theme-color" content="#102c3b">
   <title>Farhana Nasrin Akter | Research Profile</title>
   <style>
@@ -11,8 +11,8 @@
       color-scheme: light;
       --navy: #102c3b;
       --ink: #243943;
-      --muted: #64757b;
-      --accent: #ac693f;
+      --muted: #54656b;
+      --accent: #965434;
       --line: #d9dfdd;
       --paper: #f7f6f2;
       --white: #fff;
@@ -26,14 +26,14 @@
     .wrap { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
     .skip-link { position: absolute; left: 16px; top: -60px; z-index: 10; padding: 8px 14px; background: var(--navy); color: white; }
     .skip-link:focus { top: 12px; }
-    .site-header { background: rgba(247, 246, 242, .95); border-bottom: 1px solid var(--line); }
+    .site-header { position: static; background: rgba(247, 246, 242, .95); border-bottom: 1px solid var(--line); }
     .header-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { color: var(--navy); font: 700 1.55rem Georgia, 'Times New Roman', serif; text-decoration: none; letter-spacing: -.04em; white-space: nowrap; }
     .brand span { color: var(--accent); }
     .nav-links { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 30px; }
     .nav-links a { color: var(--ink); font-size: .88rem; font-weight: 600; text-decoration: none; }
     .nav-links a:hover, .text-link:hover { color: var(--accent); }
-    .nav-links .nav-scholar { border: 1px solid var(--navy); border-radius: 100px; padding: 8px 16px; }
+    .nav-links .nav-contact { border: 1px solid var(--navy); border-radius: 100px; padding: 8px 16px; }
     .hero { display: grid; grid-template-columns: minmax(0, 1.22fr) minmax(300px, .78fr); align-items: center; gap: clamp(36px, 7vw, 100px); padding-block: clamp(72px, 10vw, 132px) 92px; }
     .eyebrow { margin: 0 0 20px; color: var(--accent); font-size: .77rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
     h1, h2, h3, p { margin-top: 0; }
@@ -72,11 +72,28 @@
     .aside-card { border-left: 3px solid var(--accent); padding: 4px 0 4px 23px; }
     .aside-card strong { display: block; color: var(--navy); margin-bottom: 10px; }
     .aside-card p { color: var(--muted); margin-bottom: 0; }
-    .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 42px; }
+    .interest-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 0; padding: 0; }
+    .interest-list li { border: 1px solid var(--line); border-radius: 100px; padding: 7px 16px; background: white; color: var(--navy); font-weight: 600; font-size: .92rem; }
+    .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 38px; }
     .research-card { min-height: 230px; padding: 32px; background: white; border: 1px solid var(--line); border-radius: 10px; }
     .research-card .mark { color: var(--accent); font: 400 2.3rem Georgia, 'Times New Roman', serif; line-height: 1; }
     .research-card h3 { font: 400 1.65rem Georgia, 'Times New Roman', serif; margin: 24px 0 10px; }
     .research-card p { color: var(--muted); margin-bottom: 0; }
+    .timeline { border-top: 1px solid var(--line); }
+    .timeline article { display: grid; grid-template-columns: 175px minmax(0, 1fr); gap: 30px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+    .timeline .date { color: var(--accent); font-weight: 700; font-size: .9rem; }
+    .timeline h3 { font: 400 1.55rem/1.3 Georgia, 'Times New Roman', serif; margin: 0 0 4px; }
+    .timeline .place { color: var(--muted); margin: 0; }
+    .timeline ul { margin: 12px 0 0; padding-left: 20px; }
+    .timeline li + li { margin-top: 5px; }
+    .skill-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .skill-card { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 26px; }
+    .skill-card h3 { font: 400 1.4rem Georgia, 'Times New Roman', serif; margin-bottom: 10px; }
+    .skill-card p { color: var(--muted); margin-bottom: 0; }
+    .project-card { min-height: 0; }
+    .project-card h3 { margin-top: 0; }
+    .subheading { margin: 40px 0 18px; font: 400 1.5rem Georgia, 'Times New Roman', serif; }
+    .small-note { color: var(--muted); margin-top: 20px; }
     .publications { background: var(--navy); color: #e4eceb; }
     .publications h2 { color: white; }
     .publications .section-number { color: #e6a77b; }
@@ -112,7 +129,7 @@
       .wrap { width: min(100% - 32px, 1160px); }
       .header-inner { padding-block: 18px; align-items: flex-start; flex-direction: column; gap: 12px; }
       .nav-links { gap: 8px 18px; }
-      .nav-links .nav-scholar { padding: 4px 12px; }
+      .nav-links .nav-contact { padding: 4px 12px; }
       .hero { gap: 40px; padding-block: 50px 60px; }
       h1 { font-size: clamp(3.2rem, 13vw, 4.8rem); }
       .portrait-panel { min-height: 380px; }
@@ -120,7 +137,10 @@
       .focus-inner, .research-grid { grid-template-columns: 1fr; }
       .focus-inner div + div { border-left: 0; border-top: 1px solid var(--line); padding: 14px 0 0; }
       .section { padding-block: 68px; }
+      .section-top { flex-direction: column; gap: 8px; }
       .research-card { min-height: 0; }
+      .skill-grid { grid-template-columns: 1fr; }
+      .timeline article { grid-template-columns: 1fr; gap: 5px; }
       .publications-intro { margin-left: 0; }
       .publication { grid-template-columns: 1fr; gap: 4px; }
       .publication a { width: fit-content; margin-top: 8px; }
@@ -136,9 +156,10 @@
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#publications">Publications</a>
-        <a href="#updates">Updates</a>
-        <a class="nav-scholar" href="https://scholar.google.com/citations?user=QS0ycOwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+        <a class="nav-contact" href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -146,84 +167,148 @@
   <main id="main">
     <section class="wrap hero" id="top" aria-labelledby="page-title">
       <div>
-        <p class="eyebrow">Academic research profile</p>
+        <p class="eyebrow">Mechanical engineering &amp; energy research</p>
         <!-- EDIT: Name, headline, and introductory text -->
         <h1 id="page-title"><span>Farhana Nasrin</span> Akter</h1>
-        <p class="hero-lead">Research interests in energy storage materials, synthesis, and electrochemical analysis.</p>
-        <p class="hero-copy">Published work listed on Google Scholar spans lithium–sulfur batteries and a low-cost solar energy device.</p>
+        <p class="hero-lead">PhD student and research assistant at South Dakota Mines, working on materials for next-generation lithium–sulfur batteries.</p>
+        <p class="hero-copy">Her experience connects experimental energy research with engineering design, teaching, and project leadership.</p>
         <div class="hero-actions">
           <a class="button" href="#publications">Explore publications</a>
-          <a class="button ghost" href="https://scholar.google.com/citations?user=QS0ycOwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">View Google Scholar ↗</a>
+          <a class="button ghost" href="contact.html">Get in touch</a>
         </div>
       </div>
       <div class="portrait-panel">
         <div class="portrait-frame"><img src="assets/portrait.jpg" alt="Farhana Nasrin Akter" width="192" height="192"></div>
-        <div class="portrait-note"><strong>Farhana Nasrin Akter</strong><span>Research · materials · energy</span></div>
+        <div class="portrait-note"><strong>Farhana Nasrin Akter</strong><span>Research assistant · South Dakota Mines</span></div>
       </div>
     </section>
 
     <div class="focus-strip" aria-label="Research at a glance">
       <div class="wrap focus-inner">
-        <div><small>Research interest</small><span>Energy storage materials</span></div>
-        <div><small>Research interest</small><span>Synthesis &amp; electrochemical analysis</span></div>
-        <div><small>Selected work</small><span>Lithium–sulfur batteries</span></div>
+        <div><small>Current role</small><span>Research assistant · South Dakota Mines</span></div>
+        <div><small>Research focus</small><span>Lithium–sulfur &amp; flexible batteries</span></div>
+        <div><small>Education</small><span>Mechanical Engineering PhD · expected 2027</span></div>
       </div>
     </div>
 
     <section class="wrap section" id="about" aria-labelledby="about-title">
-      <div class="section-top"><span class="section-number">01 / PROFILE</span><h2 id="about-title">About</h2></div>
+      <div class="section-top"><span class="section-number">PROFILE</span><h2 id="about-title">About</h2></div>
       <div class="about-grid">
         <!-- EDIT: About text. Confirm any new personal or career claims with Farhana before publishing. -->
-        <p>Farhana Nasrin Akter’s Google Scholar profile lists energy storage materials, synthesis, and electrochemical characteristics analysis as research interests. Her scholarly record includes work on lithium–sulfur batteries and a parabolic solar cooker.</p>
-        <div class="aside-card"><strong>From the public record</strong><p>Google Scholar describes Farhana as a graduate research student and shows a verified email at mines.sdsmt.edu. For her latest professional details, visit her Scholar profile.</p></div>
+        <p>Farhana Nasrin Akter is pursuing a PhD in Mechanical Engineering at South Dakota Mines, with expected completion in December 2027. As a research assistant, she studies the synthesis, characterization, and performance of materials for lithium–sulfur batteries. Her background also includes university teaching, industrial procurement, and marine engineering.</p>
+        <div class="aside-card"><strong>Across research and practice</strong><p>Her résumé connects energy storage and renewable energy research with hands-on engineering, student supervision, and cross-functional project work.</p></div>
       </div>
     </section>
 
     <section class="wrap section" id="research" aria-labelledby="research-title">
-      <div class="section-top"><span class="section-number">02 / WORK</span><h2 id="research-title">Research themes</h2></div>
+      <div class="section-top"><span class="section-number">INTERESTS</span><h2 id="research-title">Research interests</h2></div>
+      <ul class="interest-list" aria-label="Research interests">
+        <li>Energy storage</li><li>Lithium–sulfur batteries</li><li>Flexible battery technology</li><li>Materials science</li><li>Renewable energy</li>
+      </ul>
       <div class="research-grid">
-        <article class="research-card"><span class="mark" aria-hidden="true">↗</span><h3>Energy storage</h3><p>Her 2024 journal article and 2025 conference abstract examine approaches to high-performance lithium–sulfur batteries.</p></article>
-        <article class="research-card"><span class="mark" aria-hidden="true">◌</span><h3>Solar energy</h3><p>A 2017 conference paper studies the fabrication and performance of a low-cost parabolic solar cooker.</p></article>
+        <article class="research-card"><span class="mark" aria-hidden="true">◌</span><h3>Battery materials</h3><p>Her current research assistant role involves advanced materials for lithium–sulfur batteries, including synthesis, characterization, and performance testing.</p></article>
+        <article class="research-card"><span class="mark" aria-hidden="true">◇</span><h3>Renewable energy</h3><p>Her earlier solar cooker publication and projects in photovoltaic module recycling and solar-powered road markings reflect this interest.</p></article>
       </div>
     </section>
 
     <section class="section publications" id="publications" aria-labelledby="publications-title">
       <div class="wrap">
-        <div class="section-top"><span class="section-number">03 / SCHOLARSHIP</span><h2 id="publications-title">Selected publications</h2></div>
+        <div class="section-top"><span class="section-number">SCHOLARSHIP</span><h2 id="publications-title">Selected publications</h2></div>
         <p class="publications-intro">The following works are listed on Farhana’s Google Scholar profile. Follow each DOI for the publisher record.</p>
         <!-- EDIT: Add the newest publication first. Keep the year, title, venue, and DOI together. -->
         <article class="publication">
           <span class="publication-year">2025</span>
           <div><h3>Development of a Flexible, Cost-Effective, and Scalable High-Performance Lithium-Sulfur Battery</h3><p>ECS Meeting Abstracts · 248th ECS Meeting</p></div>
-          <a href="https://doi.org/10.1149/ma2025-02183mtgabs" target="_blank" rel="noopener noreferrer" aria-label="Open DOI for Development of a Flexible, Cost-Effective, and Scalable High-Performance Lithium-Sulfur Battery">View DOI ↗</a>
+          <a href="https://doi.org/10.1149/ma2025-02183mtgabs" target="_blank" rel="noopener noreferrer" aria-label="Open DOI for Development of a Flexible, Cost-Effective, and Scalable High-Performance Lithium-Sulfur Battery">View DOI</a>
         </article>
         <article class="publication">
           <span class="publication-year">2024</span>
           <div><h3>A Highly Effective Polysulfide-Trapping Approach for the Development of High Energy Density, Scalable Lithium-Sulfur Batteries</h3><p>Journal of The Electrochemical Society, 171(4), 040540</p></div>
-          <a href="https://doi.org/10.1149/1945-7111/ad3ebf" target="_blank" rel="noopener noreferrer" aria-label="Open DOI for A Highly Effective Polysulfide-Trapping Approach for the Development of High Energy Density, Scalable Lithium-Sulfur Batteries">View DOI ↗</a>
+          <a href="https://doi.org/10.1149/1945-7111/ad3ebf" target="_blank" rel="noopener noreferrer" aria-label="Open DOI for A Highly Effective Polysulfide-Trapping Approach for the Development of High Energy Density, Scalable Lithium-Sulfur Batteries">View DOI</a>
         </article>
         <article class="publication">
           <span class="publication-year">2017</span>
           <div><h3>Fabrication and performance analysis of a low cost parabolic type solar cooker</h3><p>AIP Conference Proceedings, 1851(1), 020053</p></div>
-          <a href="https://doi.org/10.1063/1.4984682" target="_blank" rel="noopener noreferrer" aria-label="Open DOI for Fabrication and performance analysis of a low cost parabolic type solar cooker">View DOI ↗</a>
+          <a href="https://doi.org/10.1063/1.4984682" target="_blank" rel="noopener noreferrer" aria-label="Open DOI for Fabrication and performance analysis of a low cost parabolic type solar cooker">View DOI</a>
         </article>
+      </div>
+    </section>
+
+    <section class="wrap section" id="experience" aria-labelledby="experience-title">
+      <div class="section-top"><span class="section-number">EXPERIENCE</span><h2 id="experience-title">Professional experience</h2></div>
+      <!-- EDIT: Add or update positions, employers, dates, and responsibilities here. -->
+      <div class="timeline">
+        <article><span class="date">Aug 2023 – present</span><div><h3>Research Assistant</h3><p class="place">South Dakota School of Mines &amp; Technology · USA</p><ul><li>Studies advanced materials for next-generation lithium–sulfur batteries through synthesis, SEM, XPS, in-situ Raman, and performance testing.</li><li>Analyzes data in Origin and prepares technical reports and research papers.</li><li>Supports laboratory operations, safety, inventory, faculty collaboration, and grant proposals.</li></ul></div></article>
+        <article><span class="date">Sep 2021 – Oct 2022</span><div><h3>Executive Officer</h3><p class="place">KY Steel · Chattogram, Bangladesh</p><ul><li>Managed local and international purchasing of production materials.</li><li>Prepared purchase orders after supplier RFQ analysis and supported complex procurement and contractual work.</li></ul></div></article>
+        <article><span class="date">Jan 2018 – Dec 2020</span><div><h3>Lecturer</h3><p class="place">University of Creative Technology Chittagong · Bangladesh</p><ul><li>Taught renewable energy, strength of materials, fluid mechanics, and production processes.</li><li>Supported student progress and supervised undergraduate final-year research projects.</li></ul></div></article>
+        <article><span class="date">Nov 2015 – Nov 2017</span><div><h3>Assistant Engineer</h3><p class="place">Western Marine Shipyard Limited · Bangladesh</p><ul><li>Developed ship pipeline and HVAC systems, estimated bills of quantities, and checked purchased items.</li><li>Conducted system surveys, resolved design inconsistencies with the structural team, and supported internal audits.</li></ul></div></article>
+      </div>
+    </section>
+
+    <section class="wrap section" id="skills" aria-labelledby="skills-title">
+      <div class="section-top"><span class="section-number">CAPABILITIES</span><h2 id="skills-title">Technical skills</h2></div>
+      <!-- EDIT: Keep skills current with hands-on experience. -->
+      <div class="skill-grid">
+        <article class="skill-card"><h3>Battery testing</h3><p>Galvanostatic charge–discharge, C-rate testing, electrochemical impedance spectroscopy, cyclic voltammetry, and Raman split-cell testing.</p></article>
+        <article class="skill-card"><h3>Characterization</h3><p>UV–Vis spectroscopy, scanning electron microscopy, XPS, and in-situ Raman analysis.</p></article>
+        <article class="skill-card"><h3>Engineering design</h3><p>SolidWorks, AutoCAD, and Rhinoceros.</p></article>
+        <article class="skill-card"><h3>Analysis &amp; programming</h3><p>MATLAB, Origin, C++, and Fortran.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap section" id="education" aria-labelledby="education-title">
+      <div class="section-top"><span class="section-number">EDUCATION</span><h2 id="education-title">Education</h2></div>
+      <!-- EDIT: Confirm degree status and expected completion dates before publishing. -->
+      <div class="timeline">
+        <article><span class="date">Expected Dec 2027</span><div><h3>PhD, Mechanical Engineering</h3><p class="place">South Dakota School of Mines &amp; Technology · USA</p></div></article>
+        <article><span class="date">Aug 2023 – Dec 2025</span><div><h3>MS, Mechanical Engineering</h3><p class="place">South Dakota School of Mines &amp; Technology · USA</p><p class="small-note">Project: High performance of next-generation lithium–sulfur batteries.</p></div></article>
+        <article><span class="date">Mar 2011 – Nov 2015</span><div><h3>Bachelor’s, Mechanical Engineering</h3><p class="place">Chittagong University of Engineering &amp; Technology · Bangladesh</p><p class="small-note">Thesis: Fabrication and performance analysis of a low-cost parabolic-type solar cooker.</p></div></article>
+      </div>
+    </section>
+
+    <section class="wrap section" id="projects" aria-labelledby="projects-title">
+      <div class="section-top"><span class="section-number">PROJECTS</span><h2 id="projects-title">Selected projects</h2></div>
+      <div class="research-grid">
+        <article class="research-card project-card"><h3>PV module recycling</h3><p>Studied mechanical dismantling, thermal delamination, and chemical separation to recover glass, silicon, and metals.</p></article>
+        <article class="research-card project-card"><h3>Renewable road markings</h3><p>Designed a road marking system using solar-powered illumination and environmentally conscious materials.</p></article>
+        <article class="research-card project-card"><h3>LED matrix feedback control</h3><p>Developed a sensor- and microcontroller-based control system for dynamic LED patterns.</p></article>
+        <article class="research-card project-card"><h3>Low-cost solar cooker</h3><p>Built a parabolic solar cooker from locally available materials and evaluated temperature rise, cooking time, and thermal efficiency.</p></article>
+      </div>
+    </section>
+
+    <section class="wrap section" id="leadership" aria-labelledby="leadership-title">
+      <div class="section-top"><span class="section-number">LEADERSHIP</span><h2 id="leadership-title">Leadership &amp; community</h2></div>
+      <div class="timeline">
+        <article><span class="date">Jan 2018 – Dec 2020</span><div><h3>Undergraduate project supervisor</h3><p class="place">University of Creative Technology Chittagong</p><p class="small-note">Guided mechanical engineering research projects through milestones, thesis defenses, and presentations.</p></div></article>
+        <article><span class="date">Nov 2015 – Nov 2017</span><div><h3>Technical trainer</h3><p class="place">Western Marine Shipyard Limited</p><p class="small-note">Trained more than 40 technical professionals in piping and HVAC quality procedures and monitored a team of 25 engineers during fabrication and installation.</p></div></article>
+      </div>
+      <h3 class="subheading">Professional community</h3>
+      <div class="skill-grid">
+        <div class="skill-card"><h3>ASME</h3><p>Member, American Society of Mechanical Engineers · since June 2025.</p></div>
+        <div class="skill-card"><h3>Association of Bangladeshi Students</h3><p>Member at South Dakota Mines · since April 2024.</p></div>
+      </div>
+      <h3 class="subheading">Professional development</h3>
+      <div class="skill-grid">
+        <div class="skill-card"><h3>Responsible Conduct of Research</h3><p>NSF Grants 1 – Basic Stage · September 2024.</p></div>
+        <div class="skill-card"><h3>Regional I-Corps training</h3><p>Great Plains I-Corps Hub · January–February 2025.</p></div>
       </div>
     </section>
 
     <section class="wrap section latest" id="updates" aria-labelledby="updates-title">
       <div>
-        <div class="section-top"><span class="section-number">04 / UPDATES</span><h2 id="updates-title">News &amp; milestones</h2></div>
-        <p>Recent public work and future milestones can be shared here. <a class="text-link" href="https://scholar.google.com/citations?user=QS0ycOwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Visit Google Scholar ↗</a> for the full publication profile.</p>
+        <div class="section-top"><span class="section-number">UPDATES</span><h2 id="updates-title">News &amp; milestones</h2></div>
+        <p>Recent public work and future milestones can be shared here. <a class="text-link" href="https://scholar.google.com/citations?user=QS0ycOwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Visit Google Scholar</a> for the full publication profile.</p>
       </div>
       <div id="updates-list">
         <!-- EDIT: Add new news or life-event cards above this one. Use only details approved by Farhana. -->
         <article class="update"><time datetime="2025">2025 · Publication</time><h3>Battery research in ECS Meeting Abstracts</h3><p>A work on flexible, scalable lithium–sulfur battery development appears in the 2025 meeting abstracts.</p></article>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-inner"><span>Farhana Nasrin Akter</span><a href="https://scholar.google.com/citations?user=QS0ycOwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></div>
+    <div class="wrap footer-inner"><span>Farhana Nasrin Akter</span><a href="#top">Back to top</a></div>
   </footer>
 </body>
 </html>
